@@ -28,7 +28,7 @@ export default {
     //Return The data value renedering by server with Nuxt
     async asyncData(context){
         try {
-            let {data} = await axios.get('https://jsonplaceholder.typicode.com/todos')
+            let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
             return {posts: data}         
         } catch (error) {
             console.log("Posts index mounted error", error);
