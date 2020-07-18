@@ -5,11 +5,31 @@
   </div>
 
   <div class="container">
-      <h2 v-for="post in posts" :key="post.id" class="">{{ post.title }}</h2>
+      <h4 v-for="post in posts" :key="post.id" class="">{{ post.title }}</h4>
   </div>
 </div>
 </template>
 
+<script>
+import axios from 'axios'
+export default {
+    data() {
+        return {
+            posts: '20 posts'
+        }
+    },
+    //Return The data value renedering by server with Nuxt
+    async asyncData(context){
+        try {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/todos')
+            return {posts: response.data}         
+        } catch (error) {
+            console.log("Posts index mounted error", error);
+        }
+    }
+}
+</script>
+<!--
 <script>
 import axios from 'axios'
 export default {  
@@ -29,6 +49,7 @@ export default {
     }
 }
 </script>
+-->
 
 <style>
 

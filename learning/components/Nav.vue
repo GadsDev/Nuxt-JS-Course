@@ -1,7 +1,7 @@
 <template>
   <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Nuxt App</a>
+    <nuxt-link class="navbar-brand" to="/">Nuxt App</nuxt-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -16,14 +16,14 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-            <nuxt-link to="/" class="nav-link">Home</nuxt-link>
+          <nuxt-link to="/" class="nav-link">Home</nuxt-link>
         </li>
         <li class="nav-item">
-            <nuxt-link to="/users" class="nav-link">Users</nuxt-link>
-        </li>   
+          <nuxt-link to="/users" class="nav-link">Users</nuxt-link>
+        </li>
         <li class="nav-item">
-            <nuxt-link to="/posts" class="nav-link">Posts</nuxt-link>
-        </li>               
+          <nuxt-link to="/posts" class="nav-link">Posts</nuxt-link>
+        </li>
       </ul>
     </div>
   </nav>
