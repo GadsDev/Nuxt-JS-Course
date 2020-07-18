@@ -1,6 +1,6 @@
 .jumbotron {
     border-radius: 0px;
-    background-image: url("https://cdn.pixabay.com/photo/2011/07/03/01/47/anarchy-8265_960_720.jpg");
+    background-image: url("/background.jpeg");
     height: 300px;
     background-size: cover;
 }
