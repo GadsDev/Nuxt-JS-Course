@@ -4,15 +4,22 @@
       <h2  class="">Making API Request</h2>
   </div>
 
-  <div class="container">
-      <h4 v-for="post in posts" :key="post.id" class="">{{ post.title }}</h4>
+  <div class="container row">
+      <Card
+        v-for="post in posts" :key="post.id"  :post="post"
+        class="ml-auto mr-auto"
+      />     
   </div>
 </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Card from '@/components/Card'
 export default {
+    components: {
+        Card,
+    },
     data() {
         return {
             posts: '20 posts'
