@@ -21,11 +21,14 @@ export default {
     //Return The data value renedering by server with Nuxt
     async asyncData(context){
         try {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/todos')
-            return {posts: response.data}         
+            let {data} = await axios.get('https://jsonplaceholder.typicode.com/todos')
+            return {posts: data}         
         } catch (error) {
             console.log("Posts index mounted error", error);
         }
+    },
+    head: {
+        title: "List Of Posts"
     }
 }
 </script>
