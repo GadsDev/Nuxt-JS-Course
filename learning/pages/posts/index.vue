@@ -6,7 +6,7 @@
 
   <div class="container row">
       <Card
-        v-for="post in allPosts" :key="post.id"  :post="post"
+        v-for="post in posts" :key="post.id"  :post="post"
         class="ml-auto mr-auto"
       />     
   </div>
@@ -16,20 +16,18 @@
 <script>
 import axios from 'axios'
 import Card from '@/components/Card'
-
+import {mapGetters} from 'vuex'
 export default {
     components: {
         Card,
     },
     data() {
         return {
-            posts: ''
+            allPosts: ''
         }
     },
     computed: {
-        allPosts(){          
-            return this.$store.getters.posts
-        }
+        ...mapGetters(['posts'])      
     },
     //Return The data value renedering by server with Nuxt
     async asyncData({store}){
