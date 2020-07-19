@@ -9,6 +9,7 @@
         v-for="post in posts" :key="post.id"  :post="post"
         class="ml-auto mr-auto"
       />     
+      <button class="btn btn-danger" v-scroll-to="'body'" >Back to Top</button>
   </div>
 </div>
 </template>
@@ -20,12 +21,7 @@ import {mapGetters} from 'vuex'
 export default {
     components: {
         Card,
-    },
-    data() {
-        return {
-            allPosts: ''
-        }
-    },
+    },   
     computed: {
         ...mapGetters(['posts'])      
     },
