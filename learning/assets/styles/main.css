@@ -1,6 +1,14 @@
 .jumbotron {
-    border-radius: 0px;
-    background-image: url("/background.jpeg");
-    height: 300px;
-    background-size: cover;
+  border-radius: 0px;
+  background-image: url("/background.jpeg");
+  height: 300px;
+  background-size: cover;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
