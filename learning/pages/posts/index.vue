@@ -30,7 +30,9 @@ export default {
         ...mapGetters(['posts'])      
     },
     //Return The data value renedering by server with Nuxt
-    async asyncData({store}){
+    //asyncData Use the local data() é o melhor para interagir com o data() local
+    //fetch use the specific data é o melhor para fazer só uma consulta na api e dispara no Vuex
+    async fetch({store}){
         try {
             let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
             store.dispatch("setPosts", data);             
