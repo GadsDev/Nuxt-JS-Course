@@ -1,5 +1,5 @@
 <template>
-  <div style="background: red;">
+  <div>
       <h4>Gustavo Silva</h4>
       <nuxt-child />
   </div>
